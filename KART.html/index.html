@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Kart</title>
+    <style>
+        body {
+            background: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+
+        .kart {
+            width: 420px;
+            height: 220px;
+            margin: 100px auto;
+            border-radius: 12px;
+            position: relative;
+            padding: 20px;
+            color: white;
+            overflow: hidden;
+
+            background: #0b1a2b;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            transition: 0.3s;
+        }
+
+        .kart:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+
+        .kart::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 60%;
+            height: 100%;
+            background: repeating-linear-gradient(
+                135deg,
+                rgba(255,255,255,0.05),
+                rgba(255,255,255,0.05) 1px,
+                transparent 1px,
+                transparent 12px
+            );
+        }
+
+        
+        .isim {
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            font-size: 22px;
+            font-weight: bold;
+            z-index: 2;
+            letter-spacing: 1px;
+        }
+
+        .meslek {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 18px;
+            opacity: 0.9;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .iletisim {
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+            text-align: right;
+            font-size: 14px;
+            z-index: 1;
+        }
+
+        .iletisim a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            margin-top: 5px;
+        }
+
+        .iletisim a:hover {
+            text-decoration: underline;
+        }
+
+        .adres {
+            position: absolute;
+            left: 20px;
+            bottom: 20px;
+            font-size: 12px;
+            opacity: 0.8;
+            z-index: 1;
+            max-width: 200px;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+
+<div class="kart">
+    <div class="isim">Şevval Doruk</div>
+    <div class="cizgi"></div>
+
+    <div class="meslek">Bilgisayar Programcısı</div>
+
+    <div class="adres">
+        Ankara, Türkiye
+    </div>
+
+    <div class="iletisim">
+        <div>📞 0555 555 55 55</div>
+    <div> sevvaldoruk</div>
+</div>
+    </div>
+
+</body>
+</html>
